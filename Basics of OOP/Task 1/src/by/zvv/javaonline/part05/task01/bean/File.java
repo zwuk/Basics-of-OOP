@@ -120,7 +120,7 @@ public class File implements Serializable, FileInterface {
 			bw.write(content);
 			this.content += content;
 		} catch (IOException exc) {
-			System.out.println("1111" + exc);
+			System.out.println(exc);
 		}
 	}
 
