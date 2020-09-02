@@ -19,7 +19,7 @@ public class Runner {
 		file.addContent("000000000\n");
 		file.rename("OldFile");
 		file.printContentToConsole();
-//		file.delete();
+		file.delete();
 
 	}
 
