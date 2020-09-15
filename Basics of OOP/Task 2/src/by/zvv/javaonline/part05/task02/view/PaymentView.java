@@ -13,6 +13,6 @@ public class PaymentView {
 		for(Product prod : payment.getProductList()) {
 			System.out.println(prod.getName() + ", цена = " + prod.getPrice());
 		}
-		System.out.println("Приобретено " + payment.getProductList().size() + " позиции на общую сумму = " + action.paymentCost(payment));
+		System.out.println("Приобретено " + payment.getProductList().size() + " позиции(й) на общую сумму = " + action.paymentCost(payment));
 	}
 }
