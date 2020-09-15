@@ -12,12 +12,12 @@ public class Runner {
 
 	public static void main(String[] args) {
 		Directory dir = new Directory("src/by/zvv/javaonline/part05/task01/");
-		File file = new TextFile(dir, "NewFile.tmp");
+		File file = new TextFile(dir, "File.tmp");
 
 		file.create();
 		file.addContent("123456789\n");
 		file.addContent("000000000\n");
-		file.rename("OldFile");
+		file.rename("NewFile");
 		file.printContentToConsole();
 		file.delete();
 
