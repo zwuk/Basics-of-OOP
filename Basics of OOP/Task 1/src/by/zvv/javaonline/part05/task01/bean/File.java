@@ -117,6 +117,7 @@ public class File implements Serializable, FileInterface {
 		String filePath = this.getDirectory().getName() + this.getName();
 		
 // 		try {Files.write(Paths.get(filePath, content.getBytes(), StandartOpenOption.APPEND);}
+		
 		try (BufferedWriter bw = new BufferedWriter(new FileWriter(filePath, true))) {
 			bw.write(content);
 			this.content += content;
