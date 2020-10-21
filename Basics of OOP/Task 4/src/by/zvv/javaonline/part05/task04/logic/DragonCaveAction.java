@@ -28,7 +28,9 @@ public class DragonCaveAction {
 	public DragonCaveAction(DragonCave cave) {
 		this.cave = cave;
 	}
-	
+
+	// Конструктор, если хотим задать формат файла для хранения. По умолчанию *.csv
+	// Можно написать новые производные от TreasureStorage классы - TreasureXMLStorage и т.д.
 	public DragonCaveAction(DragonCave cave, TreasureStorage storage) {
 		this.cave = cave;
 		this.storage = storage;
@@ -71,7 +73,7 @@ public class DragonCaveAction {
 	public void showTreasureListForAmount() {
 		List<Treasure> treasures = new ArrayList<>(cave.getTreasures());
 		UserInput amount = new UserInput();
-		treasures = sorter.byRandom(treasures);
+		treasures = sorter.byRandom(treasures); // Перемешиваем, чтобы делать выборку разных сокровищ
 		treasures = filter.getListForAmount(treasures, amount.getInt());
 		view.showTreasureList(treasures);
 	}
