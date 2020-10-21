@@ -81,7 +81,7 @@ public class DragonCaveAction {
 	}
 
 	public void saveTreasures() {
-        storage.saveTreasureList(cave.getTreasures());
+        	storage.saveTreasureList(cave.getTreasures());
     }
 
 }
