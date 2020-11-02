@@ -15,4 +15,9 @@ public class UserInput {
 		return sc.nextInt();
 	}
 
+	public int getInt(String str) {
+		
+		System.out.println(str);
+		return getInt();
+	}
 }

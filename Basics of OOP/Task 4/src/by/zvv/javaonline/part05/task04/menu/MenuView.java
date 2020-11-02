@@ -48,9 +48,10 @@ public abstract class MenuView {
 		}
 		
 		Integer option = input.getInt();
+		String str = "Выберите из списка: " + allOptions.toString();
 		
 		while(!allOptions.contains(option)) {
-			option = input.getInt();
+			option = input.getInt(str);
 		}
 		
 		return option;
