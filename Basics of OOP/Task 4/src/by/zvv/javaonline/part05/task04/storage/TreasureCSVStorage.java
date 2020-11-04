@@ -12,9 +12,9 @@ import by.zvv.javaonline.part05.task04.entity.Treasure;
 
 public class TreasureCSVStorage implements TreasureStorage{
 	
-	File file = new File("src/by/zvv/javaonline/part05/task04/resource/treasures.csv");
-	String lineSeparator = System.getProperty("line.separator"); //Переменная переноса строки для различных платформ
-	String separator = ",";
+	private File file = new File("src/by/zvv/javaonline/part05/task04/resource/treasures.csv");
+	private final String lineSeparator = System.getProperty("line.separator"); //Переменная переноса строки для различных платформ
+	private final String separator = ",";
 
 	@Override
 	public void saveTreasureList(List<Treasure> treasures) {
