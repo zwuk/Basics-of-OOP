@@ -6,15 +6,17 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.net.URL;
 import java.util.List;
 
 import by.zvv.javaonline.part05.task04.entity.Treasure;
 
 public class TreasureCSVStorage implements TreasureStorage{
 	
-	File file = new File("src/by/zvv/javaonline/part05/task04/resource/treasures.csv");
-	String lineSeparator = System.getProperty("line.separator"); //Переменная переноса строки для различных платформ
-	String separator = ",";
+	private final String workDir = System.getProperty("user.dir");
+	private final File file = new File(workDir + "/resource/treasures.csv");
+	private final String lineSeparator = System.getProperty("line.separator"); //Переменная переноса строки для различных платформ
+	private final String separator = ",";
 
 	@Override
 	public void saveTreasureList(List<Treasure> treasures) {
